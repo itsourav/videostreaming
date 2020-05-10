@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Progress Monitor</title>
+    <script type="text/javascript">
+        function getPercentProg() {
+            var myVideo = document.getElementsByTagName('video')[0];
+            var endBuf = myVideo.buffered.end(0);
+            var soFar = parseInt(((endBuf / myVideo.duration) * 100));
+            document.getElementById("loadStatus").innerHTML =  soFar + '%';
+        }
+       function myAutoPlay() {
+           var myVideo = document.getElementsByTagName('video')[0];
+           myVideo.play();
+       }
+       function addMyListeners(){
+           var myVideo = document.getElementsByTagName('video')[0];
+           myVideo.addEventListener('progress', getPercentProg, false);
+           myVideo.addEventListener('canplaythrough', myAutoPlay, false);
+       }
+    </script>
+</head>
+<body onload="addMyListeners()">
+    <div>
+        <video controls
+               src="http://localhost:8080/video/stream/mp4/sunflower">
+        </video>
+        <p id="loadStatus">MOVIE LOADING...</p>
+    </div>
+</body>
+</html>

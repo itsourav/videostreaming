@@ -1,0 +1,15 @@
+
+server:
+  port: 8080
+
+aws:
+  services:
+    bucket: "souravimageprocessing"
+
+cloud:
+  aws:
+    stack.auto: false
+    region.static: "us-east-1"
+    credentials:
+      accessKey: "AKIA5VE5KZAEL4CBH5FX"
+      secretKey: "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"
