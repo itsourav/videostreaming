@@ -14,7 +14,6 @@ VIDEO STREAM HTTP
       http://localhost:8080/video/stream/mp4/toystory
       
       
-**Article about this repo**
-   [https://medium.com/@saravanastar/video-streaming-over-http-using-spring-boot-51e9830a3b8](https://medium.com/@saravanastar/video-streaming-over-http-using-spring-boot-51e9830a3b8)
+
         
       
